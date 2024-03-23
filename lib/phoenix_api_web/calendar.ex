@@ -30,7 +30,7 @@ defmodule CalendarUtils do
     delayed_date = Date.add(start_date, days_delay)
 
     %ICalendar.Event{
-      summary: "#{days_delay} #{pluralize(~c"day", ~c"days", days_delay)} since “#{title}”",
+      summary: "#{days_delay} #{pluralize(~c"day", ~c"days", days_delay)} since #{title}",
       dtstart: delayed_date,
       dtend: delayed_date
     }
