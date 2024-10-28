@@ -7,6 +7,15 @@ defmodule PhoenixApiWeb.PageController do
     render(conn, :home, layout: false)
   end
 
+  def sample_error(conn, params) do
+    try do
+      ThisWillError.really()
+    rescue
+      my_exception ->
+        Sentry.capture_exception(my_exception, stacktrace: __STACKTRACE__)
+    end
+  end
+
   def calendar(conn, params) do
     case CalendarParams.changeset(params) do
       %{valid?: true, changes: %{title: title, start_date: start_date, interval: interval}} ->

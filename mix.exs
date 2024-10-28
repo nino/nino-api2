@@ -56,7 +56,8 @@ defmodule PhoenixApi.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
       {:icalendar, "~> 1.1"},
-      {:ecto, "~> 3.11"}
+      {:ecto, "~> 3.11"},
+      {:sentry, "~> 10.2.0"}
     ]
   end
 

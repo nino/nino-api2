@@ -19,6 +19,7 @@ defmodule PhoenixApiWeb.Router do
 
     get "/", PageController, :home
     get "/calendar", PageController, :calendar
+    get "/sample-error", PageController, :sample_error
   end
 
   # Other scopes may use custom stacks.
