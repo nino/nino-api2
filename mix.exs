@@ -57,7 +57,7 @@ defmodule PhoenixApi.MixProject do
       {:bandit, "~> 1.2"},
       {:icalendar, "~> 1.1"},
       {:ecto, "~> 3.11"},
-      {:sentry, "~> 10.2.0"}
+      {:sentry, "~> 10.8.0"}
     ]
   end
 
